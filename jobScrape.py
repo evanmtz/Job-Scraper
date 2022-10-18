@@ -50,13 +50,15 @@ def transform(soup):
     return
 
 joblist = []
-
+ 
 for i in range(0, 3):
     c = extract(1)
     transform(c)
 
+# stores data from list into a dataframe using pandas
 df = pd.DataFrame(joblist)
 
 print(df.head())
 
+# creates a csv (Comma-separated values) file and stores the dataframe in that file
 df.to_csv('jobs.csv')
