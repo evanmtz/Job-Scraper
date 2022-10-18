@@ -59,4 +59,4 @@ df = pd.DataFrame(joblist)
 
 print(df.head())
 
-df.to_json('jobs.json')
+df.to_csv('jobs.csv')
